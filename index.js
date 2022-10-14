@@ -53,10 +53,23 @@ const burger = {
   name: "Burger", 
   price: 18, 
   category: "Lunch", 
-  
 }
 
-
+burger.discount = function(discountStatus){
+  let teacherDiscount = .25;
+  let studentDiscount = .25;
+  let publicDiscount = .10;
+    if (discountStatus === 'teacher') {
+    return (this.price * (1 - teacherDiscount));
+  } else if (discountStatus === 'student') {
+    return (this.price * (1 - studentDiscount));
+  } else {
+  return (this.price * (1 - publicDiscount));
+}
+}
+console.log('task 2:', burger.discount('teacher'));
+console.log('task 2:', burger.discount('student'));
+console.log('task 2:', burger.discount('public'));
 
 ///////////////Reviews (MVP)///////////////////
 const reviews = [
