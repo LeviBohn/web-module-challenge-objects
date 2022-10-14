@@ -134,9 +134,9 @@ Use the getReviewByIndex function below to do the following:
 
 
 function getReviewByIndex(array, number) {
-  return (array[number].name + " gave the restaurant a " + array[number].rating + " star review, and their feedback was: " + array[number].feedback);
+  return array[number].name + " gave the restaurant a " + array[number].rating + " star review, and their feedback was: " + array[number].feedback;
 }
-console.log(getReviewByIndex(reviews, 0));
+console.log('task 6:', getReviewByIndex(reviews, 2));
   
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -152,10 +152,11 @@ Use the getLastReview function below to do the following:
 */
 
 
-function getLastReview(/*Your code here*/) {
-  /*Your code here*/
-} 
-
+function getLastReview(array) {
+  return getReviewByIndex(array, array.length - 1);
+}
+console.log('task 7:', getLastReview(reviews));
+console.log(reviews);
 
 
 ///////////////🍔☕️🍽 STRETCH🍔☕️🍽////////////////////
